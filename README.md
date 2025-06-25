@@ -1,113 +1,101 @@
-Jupiter Help Center FAQ Bot 🤖
+🚀 Jupiter Help Center FAQ Bot
 
-This project is a smart AI-powered FAQ assistant built as a submission for the AI Internship assignment by Jupiter. It simulates a real-world customer support bot for banking, capable of understanding natural language queries, retrieving the most relevant help articles, and rephrasing answers in a friendly, professional tone.
+🤖 Built as a real-world LLM application for Jupiter’s AI Internship Challenge
 
-🔍 Problem Statement
+This project simulates a smart, multilingual chatbot for Jupiter's customer support that can understand natural questions, fetch the most relevant FAQs from the help portal, and rephrase them professionally using an LLM — all within a clean Streamlit app.
 
-The goal is to build a conversational assistant that can:
+🧠 What It Does
 
-Search and retrieve the most relevant FAQ from Jupiter's public community help portal.
+✅ Takes any customer query — English, Hindi, or Hinglish✅ Searches Jupiter’s scraped FAQs using semantic search (not keywords)✅ Picks the most relevant answers using embeddings (FAISS)✅ Rewrites the answer with a clear, friendly tone using Mistral 3.2 LLM✅ Shows token usage and lets the user give feedback (👍 / 👎 + comments)
 
-Rephrase that answer in a human-like, helpful tone.
+🎯 Key Features
 
-Handle queries in English, Hindi, or Hinglish.
+Feature
 
-Track usage and allow user feedback for continuous improvement.
+Description
 
-🚀 Features
+🔍 Semantic FAQ Retrieval
 
-✅ Core Functionalities
+Uses MiniLM + FAISS for fast, smart FAQ matching
 
-Semantic FAQ Retrieval: Uses sentence-transformers with FAISS vector store to semantically match user questions with Jupiter FAQs.
+✍️ LLM-Based Rephrasing
 
-LLM Rephrasing: Uses the mistralai/mistral-small-3.2-24b-instruct-2506:free model via OpenRouter API to rewrite answers clearly and politely.
+Uses mistralai/mistral-small-3.2-24b-instruct via OpenRouter
 
-Multilingual Support: Automatically detects Hindi or Hinglish inputs and translates them to English before processing.
+🌐 Hindi + Hinglish Support
 
-Token Usage Tracking: Displays prompt, completion, and total token usage for every OpenRouter call.
+Auto-translates input using langdetect + googletrans
 
-Feedback Collection: Allows users to rate answers (👍 / 👎) and submit comments for further improvement.
+📊 Token Usage Display
 
-🎁 Bonus
+Tracks prompt, completion & total tokens per OpenRouter call
 
-Works entirely in-browser using Streamlit.
+📩 Feedback System
 
-Caches last result to prevent content loss when interacting with buttons.
+Lets user submit reaction and comment for each answer
 
-🖼️ Sample UI (Demo Preview)
+🧾 Clean Streamlit UI
+
+Simple, polished frontend with expand/collapse for top 3 FAQs
+
+🖼️ Demo Screenshot
+
 ![Jupiter FAQ Bot UI](demo_faq.png)
 
 
-🖥️ Run Locally
+🧪 Test This Bot With Queries Like:
 
-1. Clone the Repo
+🔹 My KYC is pending
 
-git clone https://github.com/your-username/jupiter-faq-bot.git
+🔹 payment deducted but not received
+
+🔹 card otp nahi aaya (Hinglish)
+
+🔹 पैसे कट गए लेकिन ट्रांजेक्शन नहीं दिख रहा (Hindi)
+
+⚙️ Run This Project Locally
+
+git clone https://github.com/yourusername/jupiter-faq-bot.git
 cd jupiter-faq-bot
-
-2. Install Dependencies
-
 pip install -r requirements.txt
-
-3. Run the App
-
 streamlit run app.py
 
-🧠 Technologies Used
+✅ You’ll need a free OpenRouter API key → https://openrouter.ai
+
+🗂️ Project Structure
+
+├── app.py                      # Main Streamlit frontend
+├── rephrase_with_mistral.py   # Sends prompt to Mistral LLM via OpenRouter
+├── semantic_search.py         # Embedding + FAISS similarity logic
+├── cleaned_faqs.json          # Pre-cleaned FAQ knowledge base
+├── feedback_log.csv           # User feedback storage
+├── requirements.txt           # Python deps
+└── README.md                  # This file
+
+🛠️ Built With
 
 Python 3.10+
 
-Streamlit — for the frontend UI
+Streamlit – for UI
 
-FAISS — for fast vector similarity search
+FAISS – for vector similarity search
 
-Sentence-Transformers — for embeddings (all-MiniLM-L6-v2)
+Sentence Transformers – for query/FAQ embeddings
 
-OpenRouter API — for free access to Mistral LLM
+Mistral via OpenRouter – for response rewriting
 
-langdetect + googletrans — for multilingual input support
+Langdetect + Googletrans – for multilingual input support
 
-📁 Folder Structure
+🌐 Optional Deployment
 
-├── app.py                      # Streamlit main app
-├── rephrase_with_mistral.py   # LLM interaction
-├── semantic_search.py         # Embedding + vector search
-├── cleaned_faqs.json          # Jupiter help data (scraped + cleaned)
-├── feedback_log.csv           # User feedback (optional)
-├── requirements.txt           # All dependencies
-└── README.md                  # Project overview
+Deploy this to:
 
-📦 Requirements
+Streamlit Cloud — One-click GitHub connect
 
-streamlit
-sentence-transformers
-faiss-cpu
-openai
-langdetect
-googletrans==4.0.0-rc1
+Hugging Face Spaces — (also supports Streamlit apps)
 
-📤 Deployment (Optional)
+👋 About Me
 
-You can deploy this app on:
+Your NameAI + Data Science Enthusiast | Internship Applicant @ Jupiter
 
-Streamlit Cloud: https://streamlit.io/cloud
-
-Hugging Face Spaces (Gradio or Streamlit template)
-
-Just connect your GitHub repo and set the entry point to app.py.
-
-📫 Submission Guide (for Jupiter)
-
-When sharing the project:
-
-Include this GitHub repository link
-
-Optionally, include a live demo link via Streamlit Cloud
-
-Mention tech used + highlight Hindi/Hinglish input and token tracking support
-
-👨‍💻 Developed By
-
-Your NameAI Intern Applicant @ Jupiter
-
-Feel free to reach out if you'd like to collaborate, improve this bot, or need help deploying it!
+📫 Let's connect: yourname@email.com
