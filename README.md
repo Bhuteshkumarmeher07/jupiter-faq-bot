@@ -35,7 +35,7 @@ Works entirely in-browser using Streamlit.
 Caches last result to prevent content loss when interacting with buttons.
 
 🖼️ Sample UI (Demo Preview)
-
+![Jupiter FAQ Bot UI](demo_faq.png)
 
 
 🖥️ Run Locally
