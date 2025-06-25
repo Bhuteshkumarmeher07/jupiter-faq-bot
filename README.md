@@ -1,4 +1,4 @@
-##🚀 Jupiter Help Center FAQ Bot
+# 🚀 Jupiter Help Center FAQ Bot
 
 🤖 Built as a real-world LLM application for Jupiter’s AI Internship Challenge
 
