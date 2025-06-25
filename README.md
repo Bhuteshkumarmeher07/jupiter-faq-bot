@@ -6,7 +6,11 @@ This project simulates a smart, multilingual chatbot for Jupiter's customer supp
 
 🧠 What It Does
 
-✅ Takes any customer query — English, Hindi, or Hinglish✅ Searches Jupiter’s scraped FAQs using semantic search (not keywords)✅ Picks the most relevant answers using embeddings (FAISS)✅ Rewrites the answer with a clear, friendly tone using Mistral 3.2 LLM✅ Shows token usage and lets the user give feedback (👍 / 👎 + comments)
+✅ Takes any customer query — English, Hindi, or Hinglish
+✅ Searches Jupiter’s scraped FAQs using semantic search (not keywords)
+✅ Picks the most relevant answers using embeddings (FAISS)
+✅ Rewrites the answer with a clear, friendly tone using Mistral 3.2 LLM
+✅ Shows token usage and lets the user give feedback (👍 / 👎 + comments)
 
 🎯 Key Features
 
@@ -96,6 +100,9 @@ Hugging Face Spaces — (also supports Streamlit apps)
 
 👋 About Me
 
-Your NameAI + Data Science Enthusiast | Internship Applicant @ Jupiter
+Name:- Bhutesh kumar meher
+NIT Raipur, IT branch, 2025 batch
 
-📫 Let's connect: yourname@email.com
+Internship Applicant @ Jupiter
+
+📫 Let's connect: bhuteshkumarmeher125@gmail.com
