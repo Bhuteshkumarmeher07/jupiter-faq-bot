@@ -59,7 +59,7 @@ Simple, polished frontend with expand/collapse for top 3 FAQs
 
 ⚙️ Run This Project Locally
 
-git clone https://github.com/yourusername/jupiter-faq-bot.git
+git clone [https://github.com/yourusername/jupiter-faq-bot.git](https://github.com/Bhuteshkumarmeher07/jupiter-faq-bot/tree/main)
 cd jupiter-faq-bot
 pip install -r requirements.txt
 streamlit run app.py
