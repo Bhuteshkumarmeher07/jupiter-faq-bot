@@ -1,0 +1,6 @@
+streamlit
+sentence-transformers
+faiss-cpu
+openai
+langdetect
+googletrans==4.0.0-rc1
